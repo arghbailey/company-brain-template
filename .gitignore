@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+librarian/state.json
+librarian/receipts/*.json
+librarian/logs/*.log

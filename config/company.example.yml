@@ -1,0 +1,24 @@
+# Copy this to config/company.yml and fill it in. Nothing here is invented by an agent —
+# every field is a choice the accountable owner made.
+
+name: ""                 # company/venture name
+owner: ""                # accountable owner, name + how to reach them
+timezone: ""             # IANA tz, e.g. America/Los_Angeles — used for the librarian schedule
+
+publication_mode: human_review   # the only mode this template ships with
+
+librarian:
+  cadence: daily
+  run_time_local: ""     # HH:MM in `timezone` above
+  publish: false         # scheduled runs never publish; keep false
+
+sources:                 # repos/documents this brain inventories and links to
+  - label: ""
+    kind: ""             # git-repo | vault | docs | other
+    path: ""             # local path and/or remote URL
+    authoritative_for: "" # what this source is the source of truth for (OPERATING-POLICY rule)
+
+agents:                  # agents granted read + submit access
+  - name: ""
+    kind: ""             # claude-code | claudex-coder | claudex-auditor | openrouter-model | other
+    connector: ""        # how it actually reaches this repo (CLAUDE.md autoload, codex exec -C, pasted-context, ...)
